@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <button id="set-up-button">set up</button>
+    <button id="play-beep-button">beep</button>
+    <script type="module">
+        import { AudioContext, AudioWorkletNode, GainNode, OscillatorNode, isSupported } from 'https://jspm.dev/standardized-audio-context@25.3.36';
+
+        const playBeepButton = document.getElementById("play-beep-button");
+        const setUpButton = document.getElementById("set-up-button");
+
+        function setUp() {
+            let audioContext = new AudioContext();
+
+            playBeepButton.addEventListener("click", () => {
+                const oscillatorNode = new OscillatorNode(audioContext, { frequency: 500 });
+
+                oscillatorNode.onended = () => oscillatorNode.disconnect();
+                oscillatorNode.connect(audioContext.destination);
+
+                oscillatorNode.start();
+                oscillatorNode.stop(audioContext.currentTime + 0.5);
+            });
+
+            alert("OK!");
+        }
+
+        setUpButton.addEventListener("click", () => {
+            isSupported()
+                .then(isBrowserSupported => {
+                    if (isBrowserSupported) {
+                        setUp();
+                    } else {
+                        alert("Not supported");
+                    }
+                })
+                .catch(() => {
+                    alert("Error");
+                });
+        });
+    </script>
+</body>
+
+</html>
