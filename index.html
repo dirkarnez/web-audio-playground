@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./standardized-audio-context.25.3.36.min.js"></script>
 </head>
 
 <body>
     <button id="set-up-button">set up</button>
     <button id="play-beep-button">beep</button>
-    <script type="module">
-        import { AudioContext, AudioWorkletNode, GainNode, OscillatorNode, isSupported } from 'https://jspm.dev/standardized-audio-context@25.3.36';
+    <script>
+        const { AudioContext, AudioWorkletNode, GainNode, OscillatorNode, isSupported } = window.standardizedAudioContext;
 
         const playBeepButton = document.getElementById("play-beep-button");
         const setUpButton = document.getElementById("set-up-button");
