@@ -18,6 +18,7 @@ let c, p;
 class A extends AudioWorkletProcessor {
     constructor() {
         super();
+        // this.port is built-in
         this.port.onmessage = (e) => {
             p = e.data;
             p.onmessage = () => {
