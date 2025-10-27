@@ -10,3 +10,4 @@ web-audio-playground
   - [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/)
   - [webaudio-examples/audio-buffer/index.html at main · mdn/webaudio-examples](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)
   - [AudioBufferSourceNode: detune property](https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/detune)
+- [cutterbl/soundtouchjs-audio-worklet: AudioWorkletNode and AudioWorkletProcessor implementing SoundTouchJS](https://github.com/cutterbl/soundtouchjs-audio-worklet)
