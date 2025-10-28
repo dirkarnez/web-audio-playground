@@ -1,7 +1,9 @@
 class MyProcessor extends AudioWorkletProcessor {
     constructor() {
         super();
-        this.sampleRate = 44100; // Example sample rate
+
+        console.log(this.sampleRate);
+        // this.sampleRate = 44100; // Example sample rate
     }
 
     process(inputs, outputs, parameters) {
