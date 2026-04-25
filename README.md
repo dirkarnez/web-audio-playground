@@ -11,7 +11,8 @@
   - [webaudio-examples/audio-buffer/index.html at main · mdn/webaudio-examples](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)
   - [AudioBufferSourceNode: detune property](https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/detune)
 - [cutterbl/soundtouchjs-audio-worklet: AudioWorkletNode and AudioWorkletProcessor implementing SoundTouchJS](https://github.com/cutterbl/soundtouchjs-audio-worklet)
-
+- [KaiHOtw-1010/comp4431-audio-lab: An audio processor with several audio generation methods implemented](https://github.com/KaiHOtw-1010/comp4431-audio-lab)
+  - [COMP4431 Multimedia Computing - Audio Processor](https://kaihotw-1010.github.io/comp4431-audio-lab/)
 ### Notes
 ```javascript
 let c, p;
